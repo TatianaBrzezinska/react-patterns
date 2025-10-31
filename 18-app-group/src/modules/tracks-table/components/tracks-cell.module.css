@@ -1,0 +1,21 @@
+.cell {
+  cursor: pointer;
+  min-width: 80px;
+  padding: 4px !important;
+}
+
+.cell:hover {
+  background-color: #f0f0f0;
+}
+
+.trackList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.emptyCell {
+  color: #aaa;
+  text-align: center;
+  padding: 4px;
+}
