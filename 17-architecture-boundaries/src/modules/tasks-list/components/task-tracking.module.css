@@ -1,0 +1,43 @@
+.trackingInfo {
+  background-color: #e3f2fd;
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.trackingDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.trackingTask {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.trackingTime {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+}
+
+.trackButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background-color: var(--error-color);
+  color: white;
+}
+
+.trackButton:hover {
+  background-color: #d32f2f;
+}
