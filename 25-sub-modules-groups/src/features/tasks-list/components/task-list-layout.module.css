@@ -1,0 +1,13 @@
+.container {
+  --primary-color: #2196f3;
+  --error-color: #f44336;
+  --border-color: #e0e0e0;
+  --text-color: #333333;
+  --text-secondary: #666666;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

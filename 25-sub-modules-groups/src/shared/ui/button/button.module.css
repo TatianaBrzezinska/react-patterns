@@ -1,0 +1,78 @@
+.primary {
+  --bg-color: #3b82f6;
+  --text-color: white;
+  --border-color: #3b82f6;
+  --hover-bg: #2563eb;
+  --hover-border: #2563eb;
+}
+
+.secondary {
+  --bg-color: #6b7280;
+  --text-color: white;
+  --border-color: #6b7280;
+  --hover-bg: #4b5563;
+  --hover-border: #4b5563;
+}
+
+.danger {
+  --bg-color: #ef4444;
+  --text-color: white;
+  --border-color: #ef4444;
+  --hover-bg: #dc2626;
+  --hover-border: #dc2626;
+}
+
+.solid {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.solid:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--hover-border);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--bg-color);
+  border: 1px solid var(--border-color);
+}
+
+.outline:hover {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.md {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+}
+
+.lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+}
+
+/* Base button styles */
+.root {
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.root:hover {
+  cursor: pointer;
+}
