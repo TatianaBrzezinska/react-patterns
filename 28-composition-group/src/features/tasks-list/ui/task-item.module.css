@@ -1,0 +1,115 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: grab;
+  user-select: none;
+}
+
+.item:hover {
+  background-color: #f5f5f5;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.dragging {
+  opacity: 0.5;
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dragover {
+  box-shadow: 0 0 0 2px var(--primary-color);
+  background-color: var(--primary-color-light, #e3f2fd);
+}
+
+.tracking {
+  background-color: #e3f2fd;
+  border-color: var(--primary-color);
+}
+
+.done {
+  opacity: 0.7;
+  background-color: #f5f5f5;
+}
+
+.done .taskTitle {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.content {
+  flex: 1;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+}
+
+.taskTitle {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.taskTime {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  margin-top: 0.25rem;
+  margin-left: 1.7rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.trackButton,
+.deleteButton {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.trackButton {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.trackButton:hover {
+  background-color: #1976d2;
+}
+
+.trackButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.deleteButton {
+  background-color: var(--error-color);
+  color: white;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
