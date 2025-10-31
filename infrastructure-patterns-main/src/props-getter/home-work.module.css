@@ -1,0 +1,152 @@
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  position: relative;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #0d6efd;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0b5ed7;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+/* Tooltip base styles */
+.tooltip {
+  position: fixed;
+  padding: 0.5rem 1rem;
+  left: 0;
+  top: 0;
+  background-color: #212529;
+  color: white;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  max-width: 300px;
+}
+
+/* Tooltip arrows */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+}
+
+/* Top tooltip */
+.tooltip-top {
+  transform-origin: bottom center;
+}
+
+.tooltip-top::before {
+  bottom: -12px;
+  left: 50%;
+  margin-left: -6px;
+  border-top-color: #212529;
+}
+
+/* Bottom tooltip */
+.tooltip-bottom {
+  transform-origin: top center;
+}
+
+.tooltip-bottom::before {
+  top: -12px;
+  left: 50%;
+  margin-left: -6px;
+  border-bottom-color: #212529;
+}
+
+/* Left tooltip */
+.tooltip-left {
+  transform-origin: right center;
+}
+
+.tooltip-left::before {
+  right: -12px;
+  top: 50%;
+  margin-top: -6px;
+  border-left-color: #212529;
+}
+
+/* Right tooltip */
+.tooltip-right {
+  transform-origin: left center;
+}
+
+.tooltip-right::before {
+  left: -12px;
+  top: 50%;
+  margin-top: -6px;
+  border-right-color: #212529;
+}
+
+/* Animation states */
+.tooltip[style*="visibility: hidden"] {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.tooltip[style*="visibility: visible"] {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Rich content styles */
+.tooltip div {
+  white-space: normal;
+}
+
+.tooltip strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.tooltip p {
+  margin: 0.5rem 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tooltip ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.tooltip li {
+  margin: 0.25rem 0;
+}

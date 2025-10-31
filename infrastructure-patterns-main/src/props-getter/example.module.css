@@ -1,0 +1,169 @@
+.dnd-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  min-height: 200px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dnd-item {
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: grab;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.dnd-item:hover {
+  border-color: #adb5bd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dnd-item[data-dragged="true"] {
+  opacity: 0.5;
+  border-style: dashed;
+}
+
+.dnd-item[data-dragged-over="true"] {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+  transform: scale(1.02);
+}
+
+/* Task-specific styles */
+.task {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.task-title {
+  font-weight: 500;
+  color: #212529;
+  flex: 1;
+}
+
+.task-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.task-status[data-status="todo"] {
+  background-color: #fff3cd;
+  color: #664d03;
+}
+
+.task-status[data-status="done"] {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+/* Drag handle */
+.drag-handle {
+  color: #6c757d;
+  cursor: grab;
+  padding: 0.25rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.drag-handle:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+/* Container header */
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.container-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+.container-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-button.primary {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.action-button.primary:hover {
+  background-color: #0b5ed7;
+}
+
+.action-button.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.action-button.secondary:hover {
+  background-color: #5c636a;
+}
+
+/* Empty state */
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.empty-state-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state-text {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Animation for drag and drop */
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dnd-item {
+  animation: slide-in 0.2s ease;
+}

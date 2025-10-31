@@ -1,0 +1,166 @@
+.tooltip {
+  position: absolute;
+  background-color: #1976d2;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  max-width: 250px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px;
+}
+
+.tooltip.top::after {
+  border-color: #1976d2 transparent transparent transparent;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.bottom::after {
+  border-color: transparent transparent #1976d2 transparent;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.left::after {
+  border-color: transparent transparent transparent #1976d2;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+}
+
+.tooltip.right::after {
+  border-color: transparent #1976d2 transparent transparent;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+}
+
+.tooltipContent {
+  margin-bottom: 8px;
+}
+
+.tooltipButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.tooltipButton {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.tooltipButton.next {
+  background-color: white;
+  color: #1976d2;
+}
+
+.tooltipButton.next:hover {
+  background-color: #f5f5f5;
+}
+
+.tooltipButton.skip {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.tooltipButton.skip:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.highlight {
+  position: relative;
+  z-index: 1000;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #1976d2;
+  border-radius: 6px;
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(25, 118, 210, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(25, 118, 210, 0);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #1565c0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 300px;
+}
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1976d2;
+}

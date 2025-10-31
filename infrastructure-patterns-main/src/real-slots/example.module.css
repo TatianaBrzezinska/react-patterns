@@ -1,0 +1,105 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.cardContent {
+  padding: 1.5rem;
+}
+
+.cardActions {
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleRow h2 {
+  margin: 0;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.iconButton:hover {
+  background-color: #f0f0f0;
+}
+
+.contentArea {
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.contentArea p {
+  margin: 0 0 1rem 0;
+}
+
+.contentArea p:last-child {
+  margin-bottom: 0;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: white;
+  color: #4a4a4a;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #f8f9fa;
+  border-color: #ccc;
+}
+
+.button.primary {
+  background-color: #1976d2;
+  border-color: #1976d2;
+  color: white;
+}
+
+.button.primary:hover {
+  background-color: #1565c0;
+  border-color: #1565c0;
+}
