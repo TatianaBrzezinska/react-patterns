@@ -1,0 +1,27 @@
+.filterContainer {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.filterButton.active {
+  background-color: var(--primary-color);
+  color: white;
+}
