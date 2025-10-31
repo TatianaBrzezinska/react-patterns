@@ -1,0 +1,50 @@
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 12px;
+  position: relative;
+}
+
+.track:hover {
+  background-color: #e9ecef;
+}
+
+.track:hover .trackActions {
+  display: flex;
+}
+
+.trackContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.trackActions {
+  display: none;
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 4px;
+  background-color: inherit;
+  padding: 0 4px;
+}
+
+.trackName {
+  color: #666;
+  margin-right: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.trackHours {
+  white-space: nowrap;
+  font-weight: 500;
+}
